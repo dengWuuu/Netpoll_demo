@@ -43,7 +43,7 @@ func prepare(netpoll.Connection) context.Context {
 }
 
 func handle(ctx context.Context, connection netpoll.Connection) error {
-	fmt.Printf("ctx: %v", ctx)
+	fmt.Printf("ctx: %v\n", ctx)
 	reader := connection.Reader()
 	defer func(reader netpoll.Reader) {
 		err := reader.Release()
